@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Finals Task 1</title>
+
+<style>
+
+/* PAGE */
+body {
+  height: 3000px;
+  font-family: Arial, sans-serif;
+}
+
+/* CLOSE BUTTON (ABSOLUTE) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: black;
+  color: rgb(243, 232, 232);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FIXED BOX */
+.fixed-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  height: 180px;
+  background: #ddd;
+  border: 2px solid black;
+}
+
+/* PRODUCT CONTAINER */
+.product {
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+}
+
+/* IMAGE */
+.product img {
+  width: 250px;
+  display: block;
+}
+
+/* DISCOUNT BADGE */
+.discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* ADD TO CART OVERLAY (Task 15f) */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay button {
+  padding: 8px 15px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CLOSE BUTTON -->
+<div class="close-btn">X</div>
+
+<!-- FIXED BOX -->
+<div class="fixed-box"></div>
+
+<!-- PRODUCT 1 -->
+<div class="product">
+  <img src="shirt.jpg" alt="clothes">
+  <div class="discount">20% OFF</div>
+</div>
+
+<!-- PRODUCT 2 (Task 15f) -->
+<div class="product">
+  <img src="shirt.jpg" alt="clothes">
+  <div class="discount">20% OFF</div>
+
+  <div class="overlay">
+    <button>Add to Cart</button>
+  </div>
+</div>
+
+</body>
+</html>
