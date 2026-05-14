@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Task</title>
+<style>
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 12a */
+.flex-2 {
+  display: flex;
+}
+.flex-2 .item1 {
+  width: 200px;
+  background: lightblue;
+}
+.flex-2 .item2 {
+  width: 75px;
+  background: pink;
+}
+
+/* 12b */
+.flex-3 {
+  display: flex;
+}
+.flex-3 .item1 {
+  width: 50px;
+  background: lightblue;
+}
+.flex-3 .item2 {
+  flex: 75px; /* remaining space */
+  background: pink;
+}
+.flex-3 .item3 {
+  width: 75px;
+  background: lightblue;
+}
+
+/* 12c */
+.flex-4 {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-4 div {
+  background: pink;
+}
+
+/* 12d */
+.flex-border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border: 1px solid gray;
+  padding: 0 10px;
+}
+
+</style>
+</head>
+<body>
+
+<h3>12a</h3>
+<div class="flex-2">
+  <div class="item1">200px</div>
+  <div class="item2">75px</div>
+</div>
+
+<h3>12b</h3>
+<div class="flex-3">
+  <div class="item1">item1</div>
+  <div class="item2">item2</div>
+  <div class="item3">item3</div>
+</div>
+
+<h3>12c</h3>
+<div class="flex-4">
+  <div>item1</div>
+  <div>item2</div>
+  <div>item3</div>
+  <div>item4</div>
+</div>
+
+<h3>12d</h3>
+<div class="flex-border">
+  <div>item1</div>
+  <div>item2</div>
+</div>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<title>Responsive Flex Layout</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .footer {
+  background: #d8d2b8;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+}
+
+.left, .right {
+  background: green;
+  border: 5px solid yellow;
+  padding: 120px;
+}
+
+/* Desktop (800px and above) */
+@media (min-width: 800px) {
+  .main {
+    flex-direction: row;
+  }
+  .left {
+    width: 35%;
+  }
+  .right {
+    width: 70%;
+  }
+}
+
+/* Mobile (400px and below) */
+@media (max-width: 400px) {
+  .main {
+    flex-direction: column;
+  }
+  .right {
+    order: 1;
+  }
+  .left {
+    order: 2;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">This is a Header</div>
+
+  <div class="main">
+    <div class="left">Section left-nav</div>
+    <div class="right">Section right-nav</div>
+  </div>
+
+  <div class="footer">This is a footer</div>
+
+</div>
+
+</body>
+</html>
+
+</body>
+</html>

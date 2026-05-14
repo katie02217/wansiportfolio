@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: orange;
+    padding: 10px;
+    }
+
+    .box {
+    background-color: #f3ecec;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .nav { padding: 10px; }
+    .header-banner { padding: 40px; }
+
+    .main-content {
+    display: flex;
+    gap: 10px;
+    }
+
+    .sidebar {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .body-area {
+    flex: 1;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    @media (max-width: 698px) {
+        .main-content {
+        flex-direction: column;
+    }
+        .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">Logo</div>
+    <div class="box nav">Navigation</div>
+    <div class="box header-banner">Header/Banner</div>
+        
+    <div class="main-content">
+        <div class="box sidebar">Side Bar</div>
+        <div class="box body-area">Body Area</div>
+    </div>
+        
+        <div class="box">Footer</div>
+    </div>
+</body>
+</html>
